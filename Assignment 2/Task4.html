@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Assignment2-Task4</title>
+</head>
+
+<body>
+    
+    <h1>Marks Sheet</h1>
+
+    <p id = "TM"></p>
+    <p id = "MO"></p>
+    <p id = "Perct"></p>
+    <p id = "Gr"></p>
+    <p id = "RM"></p>
+    <script>
+        var TotalMarks = 300;
+        var MarksObt= prompt("Marks Obtained: ");
+        var percentage = (MarksObt/TotalMarks) * 100;
+        var Grade;
+        var Remarks;
+
+        if (percentage >= 80) {
+             Grade = "A-one";
+             Remarks =" Excellent";
+        } else if (percentage >= 70) {
+            Grade = "A";
+            Remarks = "Good";
+        } else if (percentage >= 60) {
+            Grade ="B";
+            Remarks = "You need to improve.";
+
+        } else if (percentage < 60) {
+            Grade ="F";
+            Remarks = "Sorry";
+        }
+
+
+       
+        document.getElementById("TM").innerHTML= "Total Marks: " + TotalMarks;
+        document.getElementById("MO").innerHTML= "Marks Obtained: " + MarksObt;
+        document.getElementById("Perct").innerHTML= "Percentage: " + percentage;
+        document.getElementById("Gr").innerHTML= "Grade: " + Grade;
+        document.getElementById("RM").innerHTML= "Remarks: " + Remarks;
+    </script>
+</body>
+
+
+</html>
